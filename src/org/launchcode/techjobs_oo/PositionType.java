@@ -5,6 +5,10 @@ public class PositionType {
     private static int nextId = 1;
     private String value;
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public PositionType() {
         id = nextId;
         nextId++;
@@ -16,6 +20,7 @@ public class PositionType {
     }
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
+
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
