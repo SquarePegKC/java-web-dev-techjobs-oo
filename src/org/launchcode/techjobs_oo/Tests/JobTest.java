@@ -32,7 +32,7 @@ public class JobTest {
         assertEquals (4, testJobCopy.getId());
         assertEquals (5, emptyFieldTestJob.getId());
     }
-
+@Test
     public void testJobConstructorSetsAllFields() {
         assertTrue(testJob.getName() instanceof String);
         assertEquals("Product Tester", testJob.getName());
@@ -45,20 +45,21 @@ public class JobTest {
         assertTrue(testJob.getCoreCompetency() instanceof CoreCompetency);
         assertEquals("Persistence", testJob.getCoreCompetency().getValue());
     }
-
+@Test
     public void testJobForEquality() {
         assertFalse(testJob.equals(testJobCopy));
     }
-
+@Test
     public void testToString() {
         assertEquals(jobOne.toString().startsWith("\n"));
         assertEquals(jobOne.toString().endsWith("\n"));
     }
-
+@Test
     public void testToStringField() {
-        assertEquals(jobOne.startsWith("\n").endsWith("\n"));
+
+    assertEquals(jobOne.startsWith("\n").endsWith("\n"));
     }
 
-    }
+};
 
 
