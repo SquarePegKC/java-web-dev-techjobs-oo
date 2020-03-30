@@ -12,11 +12,14 @@ public class Employer {
         nextId++;
     }
 
-    public Employer(String aValue) {
+    public Employer(String value) {
         this();
-        this.value = aValue;
+        if (value.equals("")) {
+            this.value = "Data not available.";
+        } else {
+            this.value = value;
+        }
     }
-
     // Custom toString, equals, and hashCode methods:
 
     @Override

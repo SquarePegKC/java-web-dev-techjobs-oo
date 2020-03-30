@@ -15,12 +15,16 @@ public class Location {
         nextId++;
     }
     public Location(String value) {
-        this();
-        this.value = value;
-    }
+            this();
+            if (value.equals("")) {
+                this.value = "Data not available.";
+            } else {
+                this.value = value;
+            }
+        }
 
     // Custom toString, equals, and hashCode methods:
-    @Override
+@Override
     public String toString() {
         return value;
     }
@@ -28,7 +32,6 @@ public class Location {
     public void setId(int id) {
         this.id = id;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
